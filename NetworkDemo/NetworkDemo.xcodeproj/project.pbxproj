@@ -61,6 +61,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		38E02C012B505FF50027FDB3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38E02C022B5060200027FDB3 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		511281B72B4FA595009F36F2 = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +91,6 @@
 			isa = PBXGroup;
 			children = (
 				513D827A2B4FED4700A9747A /* Manager */,
-				513D82792B4FEAE800A9747A /* Coordinator */,
 				513D82782B4FEAE100A9747A /* Common */,
 				513D82752B4FEAA700A9747A /* Extension */,
 				513D82732B4FE83200A9747A /* App */,
@@ -107,7 +114,7 @@
 		513D826A2B4FE6FA00A9747A /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				513D826F2B4FE75100A9747A /* ViewModel */,
+				38E02C012B505FF50027FDB3 /* ViewModel */,
 				513D826E2B4FE74700A9747A /* Views */,
 				513D826D2B4FE73E00A9747A /* Model */,
 				513D826B2B4FE70B00A9747A /* Home.storyboard */,
@@ -129,13 +136,6 @@
 				513D82702B4FE76400A9747A /* Controller */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		513D826F2B4FE75100A9747A /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		513D82702B4FE76400A9747A /* Controller */ = {
@@ -176,13 +176,6 @@
 				513D827D2B4FEDB800A9747A /* AppConstant.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		513D82792B4FEAE800A9747A /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
 			sourceTree = "<group>";
 		};
 		513D827A2B4FED4700A9747A /* Manager */ = {
@@ -318,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				511281C42B4FA595009F36F2 /* AppDelegate.swift in Sources */,
+				38E02C032B5060200027FDB3 /* HomeViewModel.swift in Sources */,
 				513D827C2B4FED6500A9747A /* UserDefaultsManager.swift in Sources */,
 				51B2287E2B50035000B3938C /* Movies.swift in Sources */,
 				511281CE2B4FA595009F36F2 /* NetworkDemo.xcdatamodeld in Sources */,

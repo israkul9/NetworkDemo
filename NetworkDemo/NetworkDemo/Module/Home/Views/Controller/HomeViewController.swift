@@ -10,24 +10,32 @@ import SwiftyJSON
 import Alamofire
 
 class HomeViewController: UIViewController {
-
-    @IBOutlet weak var homeTableView: UITableView!
+    var viewModel: HomeViewModel!
+    
+    @IBOutlet weak var homeTableView: UITableView! {
+        didSet {
+            homeTableView.isHidden = true
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = .cyan
         let apiWithEndpoint = "https://api.themoviedb.org/3/search/movie?api_key=38e61227f85671163c275f9bd95a8803&query=marvel"
-
-       NetworkManager.shared.fetchData(endpoint: apiWithEndpoint) { (result: Result<Movies, Error>) in
-            switch result {
-            case .success(let data):
-                // Handle successful response
-                print("Data: \(data.totalResults!)")
-            case .failure(let error):
-                // Handle error
-                print("API request failed: \(error.localizedDescription)")
+        
+        viewModel = HomeViewModel()
+        
+        viewModel.getData(baseUrl: apiWithEndpoint) { success in
+            if success {
+                debugPrint("Data found")
+            }
+            else {
+                debugPrint("Error , while getting data")
             }
         }
+
+      
     }
     
 }
