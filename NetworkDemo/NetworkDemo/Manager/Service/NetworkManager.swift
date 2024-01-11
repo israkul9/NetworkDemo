@@ -11,6 +11,7 @@ import SwiftyJSON
 
 
 class NetworkManager {
+    private let lock = NSLock()
     private var accessToken: String?
     private var refreshToken: String?
     private var retryCount = 0
@@ -23,6 +24,10 @@ class NetworkManager {
         self.refreshToken = "initial_refresh_token"
     }
     func makeRequest<T: Decodable>(url: String, method: HTTPMethod, parameters: Parameters? = nil, responseType: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
+        // Added lock for handle race condition
+        lock.lock()
+        defer { lock.unlock() }
+        
         guard let accessToken = accessToken else {
             return
         }
