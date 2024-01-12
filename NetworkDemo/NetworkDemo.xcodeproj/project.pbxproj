@@ -19,6 +19,7 @@
 		513D827C2B4FED6500A9747A /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D827B2B4FED6500A9747A /* UserDefaultsManager.swift */; };
 		513D827E2B4FEDB800A9747A /* AppConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 513D827D2B4FEDB800A9747A /* AppConstant.swift */; };
 		51B2287E2B50035000B3938C /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B2287D2B50035000B3938C /* Movies.swift */; };
+		51E4EBB22B510EC000EFD908 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51E4EBB12B510EC000EFD908 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		513D827B2B4FED6500A9747A /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		513D827D2B4FEDB800A9747A /* AppConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstant.swift; sourceTree = "<group>"; };
 		51B2287D2B50035000B3938C /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
+		51E4EBB12B510EC000EFD908 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		8B9DCB57AB2DAF2B1D41EEDF /* Pods_NetworkDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NetworkDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -64,7 +66,7 @@
 		38E02C012B505FF50027FDB3 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				38E02C022B5060200027FDB3 /* HomeViewModel.swift */,
+				51E4EBB12B510EC000EFD908 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -311,7 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				511281C42B4FA595009F36F2 /* AppDelegate.swift in Sources */,
-				38E02C032B5060200027FDB3 /* HomeViewModel.swift in Sources */,
+				51E4EBB22B510EC000EFD908 /* HomeViewModel.swift in Sources */,
 				513D827C2B4FED6500A9747A /* UserDefaultsManager.swift in Sources */,
 				51B2287E2B50035000B3938C /* Movies.swift in Sources */,
 				511281CE2B4FA595009F36F2 /* NetworkDemo.xcdatamodeld in Sources */,
