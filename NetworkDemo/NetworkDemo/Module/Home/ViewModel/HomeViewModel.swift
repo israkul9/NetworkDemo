@@ -1,31 +1,43 @@
-//
-//  HomeViewModel.swift
-//  NetworkDemo
-//
-//  Created by Israkul Tushaer-81 on 12/1/24.
-//
 
 import Foundation
 import Alamofire
-import SwiftyJSON
-
+import UIKit
+import Combine
 
 class HomeViewModel {
-   
-    func getData(baseUrl : String ,  completion: @escaping (Bool) -> Void){
-        NetworkManager.shared.makeRequest(url: baseUrl, method: .get, responseType: Movies.self) { result in
-            switch result {
-            case .success(let responseModel):
-                  // Handle success with your response model
-                print(responseModel.totalPages!)
-                completion(true)
-              case .failure(let error):
-                  // Handle failure
-                  print(error.localizedDescription)
-                completion(false)
-              
+    
+    var movieListDataSource = [Movie]()
+    var subscription = Set<AnyCancellable>()
+    var movieListSubject = PassthroughSubject<[Movie],Never>()
+    
+    func getData(baseUrl : String){
+        let baseURL = baseUrl
+        let path = "/endpoint"
+        let headers: HTTPHeaders = ["Authorization": "Bearer YOUR_ACCESS_TOKEN"]
+        let parameters: Parameters = ["key": "value"]
+        NetworkManager.shared.request(
+            baseURL: baseURL,
+            path: path,
+            method: .get,
+            headers: headers,
+            parameters: parameters,
+            dataModelType: Movies.self
+        )
+        .sink(receiveCompletion: { completion in
+            switch completion {
+            case .finished:
+                break
+            case .failure(let error):
+                print("API Request Error: \(error)")
             }
-        }
+        }, receiveValue: { [weak self] response in
+            guard let self = self else  { return }
+            if let movieList = response.results {
+                self.movieListSubject.send(movieList)
+            }
+
+        })
+        .store(in: &subscription)
     }
     
 }

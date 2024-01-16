@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0E65F51E1A3477056009D963 /* Pods_NetworkDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B9DCB57AB2DAF2B1D41EEDF /* Pods_NetworkDemo.framework */; };
+		38DE59582B57061E00F1A398 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE59562B57061E00F1A398 /* MovieCell.swift */; };
+		38DE59592B57061E00F1A398 /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DE59572B57061E00F1A398 /* MovieCell.xib */; };
 		511281C42B4FA595009F36F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 511281C32B4FA595009F36F2 /* AppDelegate.swift */; };
 		511281CE2B4FA595009F36F2 /* NetworkDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 511281CC2B4FA595009F36F2 /* NetworkDemo.xcdatamodeld */; };
 		511281D02B4FA596009F36F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 511281CF2B4FA596009F36F2 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 /* Begin PBXFileReference section */
 		0F98D9E02C799984859224AE /* Pods-NetworkDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDemo.debug.xcconfig"; path = "Target Support Files/Pods-NetworkDemo/Pods-NetworkDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		2CA12C18D2443F5EFED0F609 /* Pods-NetworkDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NetworkDemo.release.xcconfig"; path = "Target Support Files/Pods-NetworkDemo/Pods-NetworkDemo.release.xcconfig"; sourceTree = "<group>"; };
+		38DE59562B57061E00F1A398 /* MovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		38DE59572B57061E00F1A398 /* MovieCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
 		511281C02B4FA595009F36F2 /* NetworkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NetworkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		511281C32B4FA595009F36F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		511281CD2B4FA595009F36F2 /* NetworkDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NetworkDemo.xcdatamodel; sourceTree = "<group>"; };
@@ -136,6 +140,8 @@
 			isa = PBXGroup;
 			children = (
 				513D82702B4FE76400A9747A /* Controller */,
+				38DE59562B57061E00F1A398 /* MovieCell.swift */,
+				38DE59572B57061E00F1A398 /* MovieCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -259,6 +265,7 @@
 			files = (
 				513D826C2B4FE70B00A9747A /* Home.storyboard in Resources */,
 				511281D32B4FA596009F36F2 /* LaunchScreen.storyboard in Resources */,
+				38DE59592B57061E00F1A398 /* MovieCell.xib in Resources */,
 				511281D02B4FA596009F36F2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -320,6 +327,7 @@
 				5122C02E2B4FF40200E22861 /* NetworkManager.swift in Sources */,
 				513D827E2B4FEDB800A9747A /* AppConstant.swift in Sources */,
 				513D82722B4FE77C00A9747A /* HomeViewController.swift in Sources */,
+				38DE59582B57061E00F1A398 /* MovieCell.swift in Sources */,
 				513D82772B4FEAC600A9747A /* NSObject+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
